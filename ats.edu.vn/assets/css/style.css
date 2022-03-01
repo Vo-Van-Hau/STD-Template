@@ -576,7 +576,73 @@ video {
   text-transform: lowercase;
 }
 /* #endregion News Detail */
-
+/* #region Register Form */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+.register-block {
+  font-size: .9em;
+  font-weight: 200;
+  line-height: 1.5em;
+  width: 100% !important;
+}
+.register-title {
+  color: var(--redColor);
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+.input-block {
+  margin: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.input-error {
+  color: var(--redColor);
+  margin-top: .5em;
+  display: none;
+}
+.input-box {
+  padding: .2em 1em .2em;
+  width: 75%;
+  border: 1px solid var(--blackColor);
+  position: relative;
+}
+.input-box--error {
+  border-color: var(--redColor);
+  box-shadow: var(--redColor) .5px .5px 5px;
+  transition: all .5s;
+}
+.input-box input, select {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.input-box i {
+  color: red;
+  position: absolute;
+  right: .75em;
+  top: .35em;
+  display: none;
+}
+.input-block label {
+  padding-top: .3em;
+}
+.register--btn {
+  text-align: center;
+  margin: auto;
+}
+.register--btn button {
+  padding: .5em 2.5em;
+  border-radius: 1em;
+  color: white;
+  background-color: var(--greenColor);
+  border: none;
+}
+/* #endregion Register Form */
 @media only screen and (max-width : 48em){
   .main-header--inner,
   .main-header__desc .desc__title{
