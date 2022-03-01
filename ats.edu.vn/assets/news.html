@@ -21,7 +21,7 @@
                         <br> Kỹ thuật Nông nghiệp</p>
                 </a>
                 <nav class="main-header__menubar">
-                    <ul class="menubar__list">
+                    <ul class="menubar__list nav__pc">
                         <li class="menubar__list-item"><a href="#">Giới thiệu</a></li>
                         <li class="menubar__list-item"><a href="#">Phòng ban</a></li>
                         <li class="menubar__list-item"><a href="#">Tin tức</a></li>
@@ -46,70 +46,95 @@
                 </nav>
             </section>
         </header>
+        <!-- #region News -->
+        <nav class="navbar__mobile">
+            <label for="nav-mobile-input" class="nav__bars-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" name="" class="nav__input" id="nav-mobile-input" hidden>
+            <label for="nav-mobile-input" class="nav-overlay"></label>
+            <ul class="menubar__list nav__mobile">
+                <label for="nav-mobile-input"  class="nav__mobile-close"><i class="fas fa-times"></i></label>
+                <li class="menubar__mobile-list-item"><img src="images/ats-logo-2.png" alt=""></li>
+                <li class="menubar__mobile-list-item" id="visited"><a href="#">Trang chủ</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Giới thiệu</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Phòng ban</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Tin tức</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Liên hệ</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Tuyển dụng</a></li>
+            </ul>
+        </nav>
+        <!-- #endregion News -->
         <section class="news-container container">
             <section class="news-block">
                 <article class="news-box">
-                    <a class="news-box__thumbnail" href="news-detail.html">
+                    <a class="news-box__thumbnail not-hident" href="news-detail.html">
                         <img src="images/image-3.jpeg" alt="">
                     </a>
-                    <a class="news-box__title" href="news-detail.html">
-                        Thông báo tuyển sinh trung cấp 2020
-                        <span class="news-box__views">99 <i class="far fa-grin"></i></span>
-                    </a>
-                    <div class="news-box__author">
-                        <h4>admin, <span class="news-box__author--date">
-                            ngày 01/06/2020
-                        </span></h4>
-                    </div>
-                    <div class="news-box__desc">
-                        <p>Căn cứ kế hoạch đà tạo năm học 2020 - 2021 do Uỷ ban nhân dân Thành phố Hồ Chí Minh giao.<br>Trường Trung cấp Kỹ thuật Nông nghiệp Thành phố. Mã trường: TCD0216 - Website: www.ats.edu.vn thông báo tuyển sinh đào tạo trình độ Trung cấp.<br>Hình thức đào tạo: Chính quy năm học 2020 - 2021 với nội dung sau:
-                        </p>
-                        <a href="#" class="news-box__detail">
-                            Xem thêm
+                    <div>
+                        <a class="news-box__title" href="news-detail.html">
+                            Thông báo tuyển sinh trung cấp 2020
+                            <span class="news-box__views">99 <i class="far fa-grin"></i></span>
                         </a>
+                        <div class="news-box__author">
+                            <h4>admin, <span class="news-box__author--date">
+                                ngày 01/06/2020
+                            </span></h4>
+                        </div>
+                        <div class="news-box__desc">
+                            <p>Căn cứ kế hoạch đà tạo năm học 2020 - 2021 do Uỷ ban nhân dân Thành phố Hồ Chí Minh giao.<br>Trường Trung cấp Kỹ thuật Nông nghiệp Thành phố. Mã trường: TCD0216 - Website: www.ats.edu.vn thông báo tuyển sinh đào tạo trình độ Trung cấp.<br>Hình thức đào tạo: Chính quy năm học 2020 - 2021 với nội dung sau:
+                            </p>
+                            <a href="#" class="news-box__detail">
+                                Xem thêm
+                            </a>
+                        </div>
                     </div>
                 </article>
                 <article class="news-box">
-                    <a class="news-box__thumbnail" href="news-detail.html">
+                    <a class="news-box__thumbnail not-hident" href="news-detail.html">
                         <img src="images/image-3.jpeg" alt="">
                     </a>
-                    <a class="news-box__title" href="news-detail.html">
-                        Thông báo tuyển sinh trung cấp 2020
-                        <span class="news-box__views">99 <i class="far fa-grin"></i></span>
-                    </a>
-                    <div class="news-box__author">
-                        <h4>admin, <span class="news-box__author--date">
-                            ngày 01/06/2020
-                        </span></h4>
-                    </div>
-                    <div class="news-box__desc">
-                        <p>Căn cứ kế hoạch đà tạo năm học 2020 - 2021 do Uỷ ban nhân dân Thành phố Hồ Chí Minh giao.<br>Trường Trung cấp Kỹ thuật Nông nghiệp Thành phố. Mã trường: TCD0216 - Website: www.ats.edu.vn thông báo tuyển sinh đào tạo trình độ Trung cấp.<br>Hình thức đào tạo: Chính quy năm học 2020 - 2021 với nội dung sau:
-                        </p>
-                        <a href="#" class="news-box__detail">
-                            Xem thêm
+                    <div>
+                        <a class="news-box__title" href="news-detail.html">
+                            Thông báo tuyển sinh trung cấp 2020
+                            <span class="news-box__views">99 <i class="far fa-grin"></i></span>
                         </a>
+                        <div class="news-box__author">
+                            <h4>admin, <span class="news-box__author--date">
+                                ngày 01/06/2020
+                            </span></h4>
+                        </div>
+                        <div class="news-box__desc">
+                            <p>Căn cứ kế hoạch đà tạo năm học 2020 - 2021 do Uỷ ban nhân dân Thành phố Hồ Chí Minh giao.<br>Trường Trung cấp Kỹ thuật Nông nghiệp Thành phố. Mã trường: TCD0216 - Website: www.ats.edu.vn thông báo tuyển sinh đào tạo trình độ Trung cấp.<br>Hình thức đào tạo: Chính quy năm học 2020 - 2021 với nội dung sau:
+                            </p>
+                            <a href="#" class="news-box__detail">
+                                Xem thêm
+                            </a>
+                        </div>
                     </div>
                 </article>
 
                 <article class="news-box">
-                    <a class="news-box__thumbnail" href="news-detail.html">
+                    <a class="news-box__thumbnail not-hident" href="news-detail.html">
                         <img src="images/image-3.jpeg" alt="">
                     </a>
-                    <a class="news-box__title" href="news-detail.html">
-                        Thông báo tuyển sinh trung cấp 2020
-                        <span class="news-box__views">99 <i class="far fa-grin"></i></span>
-                    </a>
-                    <div class="news-box__author">
-                        <h4>admin, <span class="news-box__author--date">
-                            ngày 01/06/2020
-                        </span></h4>
-                    </div>
-                    <div class="news-box__desc">
-                        <p>Căn cứ kế hoạch đà tạo năm học 2020 - 2021 do Uỷ ban nhân dân Thành phố Hồ Chí Minh giao.<br>Trường Trung cấp Kỹ thuật Nông nghiệp Thành phố. Mã trường: TCD0216 - Website: www.ats.edu.vn thông báo tuyển sinh đào tạo trình độ Trung cấp.<br>Hình thức đào tạo: Chính quy năm học 2020 - 2021 với nội dung sau:
-                        </p>
-                        <a href="#" class="news-box__detail">
-                            Xem thêm
+                    <div>
+                        <a class="news-box__title" href="news-detail.html">
+                            Thông báo tuyển sinh trung cấp 2020
+                            <span class="news-box__views">99 <i class="far fa-grin"></i></span>
                         </a>
+                        <div class="news-box__author">
+                            <h4>admin, <span class="news-box__author--date">
+                                ngày 01/06/2020
+                            </span></h4>
+                        </div>
+                        <div class="news-box__desc">
+                            <p>Căn cứ kế hoạch đà tạo năm học 2020 - 2021 do Uỷ ban nhân dân Thành phố Hồ Chí Minh giao.<br>Trường Trung cấp Kỹ thuật Nông nghiệp Thành phố. Mã trường: TCD0216 - Website: www.ats.edu.vn thông báo tuyển sinh đào tạo trình độ Trung cấp.<br>Hình thức đào tạo: Chính quy năm học 2020 - 2021 với nội dung sau:
+                            </p>
+                            <a href="#" class="news-box__detail">
+                                Xem thêm
+                            </a>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -259,9 +284,9 @@
                 </section>
             </aside>
         </section>
-        <footer class="main-footer--outter">
+        <footer class="main-footer--outter inside-box">
             <section class="container">
-                <section class="contacts-box content-box">
+                <section class="contacts-box content-box inside-box__content">
                     <section class="contacts-box__header">
                         <ul class="contacts-box__list">
                             <li class="contacts-box__list--item">
@@ -318,7 +343,7 @@
                     </section>
                 </section>
             </section>
-            <section class="main-footer--inner">
+            <section class="main-footer--inner inside-box__main">
                 <article class="main-footer__content">
                     <section class="main-footer__logo">
                         <img src="images/ats-logo-2.png" alt="">

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
     </script>
@@ -26,7 +27,7 @@
                         <br> Kỹ thuật Nông nghiệp</p>
                 </a>
                 <nav class="main-header__menubar">
-                    <ul class="menubar__list">
+                    <ul class="menubar__list nav__pc">
                         <li class="menubar__list-item"><a href="#">Giới thiệu</a></li>
                         <li class="menubar__list-item"><a href="#">Phòng ban</a></li>
                         <li class="menubar__list-item"><a href="#">Tin tức</a></li>
@@ -60,6 +61,25 @@
                 </div>
             </section>
         </header>
+        <!-- #region News -->
+        <nav class="navbar__mobile">
+            <label for="nav-mobile-input" class="nav__bars-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" name="" class="nav__input" id="nav-mobile-input" hidden>
+            <label for="nav-mobile-input" class="nav-overlay"></label>
+            <ul class="menubar__list nav__mobile">
+                <label for="nav-mobile-input"  class="nav__mobile-close"><i class="fas fa-times"></i></label>
+                <li class="menubar__mobile-list-item"><img src="images/ats-logo-2.png" alt=""></li>
+                <li class="menubar__mobile-list-item" id="visited"><a href="#">Trang chủ</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Giới thiệu</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Phòng ban</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Tin tức</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Liên hệ</a></li>
+                <li class="menubar__mobile-list-item"><a href="#">Tuyển dụng</a></li>
+            </ul>
+        </nav>
+        <!-- #endregion News -->
         <section class="body-container container">
             <section class="event-box content-box">
                 <!-- #region News  -->
