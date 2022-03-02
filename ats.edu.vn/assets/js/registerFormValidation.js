@@ -16,12 +16,16 @@ function toggleErrors(index, isCorrect) {
     switch (isCorrect) {
         case 1: {
                 $(inputBox[index]).addClass('input-box--error');
-                $(inputBox[index]).children('.fas').css({
+                $(inputBox[index]).children('.error-tag').css({
                     display: 'inline',
+                });
+                $(inputBox[index]).children('.input-tag').css({
+                    display: 'none',
                 });
                 $(inputBox[index]).parent().children('p.input-error').css({
                     display: 'block',
-                })
+                });
+                
                 return false;
                 // break;
             }
@@ -29,6 +33,9 @@ function toggleErrors(index, isCorrect) {
             $(inputBox[index]).removeClass('input-box--error');
             $(inputBox[index]).children('.fas').css({
                 display: 'none',
+            });
+            $(inputBox[index]).children('.input-tag').css({
+                display: 'inline',
             });
             $(inputBox[index]).parent().children('p.input-error').css({
                 display: 'none',
@@ -50,15 +57,15 @@ const isDOBCorrect = () => {
     let today = new Date();
     let date = new Date(dob.val());
     if(date > today || isNaN(date.getDate())) {
-        return toggleErrors(1, 1);
+        return toggleErrors(2, 1);
     } else {
-        return toggleErrors(1, 0);
+        return toggleErrors(2, 0);
     }
 }
 const isPhoneCorrect = () => {
     if(!phoneRegex.test(phone.val())) {
-        return toggleErrors(2, 1);
-    } else return toggleErrors(2, 0);
+        return toggleErrors(1, 1);
+    } else return toggleErrors(1, 0);
 }
 const isMailCorrect = () => {
     if(!mailRegex.test(mail.val())) {

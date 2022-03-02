@@ -546,6 +546,9 @@ video {
   font-size: .9em;
   font-weight: 200;
   border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .searchbar-form input {
   border: none;
@@ -675,11 +678,17 @@ video {
   font-size: 1.2em;
   margin-bottom: .5em;
 }
-.input-block {
-  margin: 1.2em;
+.base-value {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* height: 50px; */
+}
+.base-value .input-block {
+  width: 45%;
+  margin: 0 1.2em;
+}
+.input-block {
+  margin: 1.2em;
 }
 .input-error {
   color: var(--redColor);
@@ -688,8 +697,9 @@ video {
 }
 .input-box {
   padding: .2em 1em .2em;
-  width: 75%;
+  /* width: 75%; */
   border: 1px solid var(--blackColor);
+  border-radius: .5em;
   position: relative;
 }
 .input-box--error {
@@ -697,17 +707,23 @@ video {
   box-shadow: var(--redColor) .5px .5px 5px;
   transition: all .5s;
 }
-.input-box input, select {
+.input-box input, select, textarea {
   width: 100%;
   border: none;
   background-color: transparent;
 }
-.input-box i {
+
+.input-box .error-tag {
   color: red;
   position: absolute;
   right: .75em;
   top: .35em;
   display: none;
+}
+.input-box .input-tag {
+  position: absolute;
+  right: .75em;
+  top: .35em;
 }
 .input-block label {
   padding-top: .3em;

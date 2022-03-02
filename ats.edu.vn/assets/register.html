@@ -12,7 +12,6 @@
     <script src="lib/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-
     <main class="main-wrapper">
         <header class="main-header--outter">
             <section class="main-header--inner">
@@ -22,7 +21,7 @@
                         <br> Kỹ thuật Nông nghiệp</p>
                 </a>
                 <nav class="main-header__menubar">
-                    <ul class="menubar__list nav__pc">
+                    <ul class="menubar__list">
                         <li class="menubar__list-item"><a href="#">Giới thiệu</a></li>
                         <li class="menubar__list-item"><a href="#">Phòng ban</a></li>
                         <li class="menubar__list-item"><a href="#">Tin tức</a></li>
@@ -74,55 +73,57 @@
                         <h4 class="register-title">
                             Thông tin cá nhân
                         </h4>
+                        <section class="base-value">
+                            <article class="input-block">
+                                <div class="input-box">
+                                    <input type="text" name="fullName" id="fullName" placeholder="Họ và tên...">
+                                    <i class="fas fa-exclamation-circle error-tag" style="color: red;"></i>
+                                    <i class="fas fa-user input-tag"></i>
+                                </div>
+                                <p class="input-error">Vui lòng nhập họ tên</p>
+                            </article>
+                            <article class="input-block">
+                                <div class="input-box">
+                                    <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Số điện thoại...">
+                                    <i class="fas fa-exclamation-circle error-tag" style="color: red;"></i>
+                                    <i class="fas fa-phone input-tag"></i>
+                                </div>
+                                <p class="input-error">Vui lòng nhập lại số điện thoại</p>
+                            </article>
+                        </section>
                         <article class="input-block">
-                            <label for="fullName">Họ và tên</label>
                             <div class="input-box">
-                                <input type="text" name="fullName" id="fullName" placeholder="Họ và tên...">
-                                <i class="fas fa-exclamation-circle" style="color: red;"></i>
-                            </div>
-                            <p class="input-error">Vui lòng nhập họ tên</p>
-                        </article>
-                        <article class="input-block">
-                            <label for="dateOfBirth">Ngày sinh</label>
-                            <div class="input-box">
-                                <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="dd/mm/yyyy">
-                                <i class="fas fa-exclamation-circle" style="color: red;"></i>
+                                <input type="text" name="dateOfBirth" id="dateOfBirth" placeholder="Ngày sinh" onfocus="(this.type = 'date')" onblur="(this.type = 'text')">
+                                <i class="fas fa-exclamation-circle error-tag" style="color: red;"></i>
+                                <i class="fas fa-calendar input-tag"></i>
                             </div>
                             <p class="input-error">Vui lòng nhập lại ngày sinh</p>
                         </article>
                         <article class="input-block">
-                            <label for="phoneNumber">Số điện thoại</label>
-                            <div class="input-box">
-                                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Số điện thoại...">
-                                <i class="fas fa-exclamation-circle" style="color: red;"></i>
-                            </div>
-                            <p class="input-error">Vui lòng nhập lại số điện thoại</p>
-                        </article>
-                        <article class="input-block">
-                            <label for="email">Email</label>
                             <div class="input-box">
                                 <input type="text" name="email" id="email" placeholder="Email...">
-                                <i class="fas fa-exclamation-circle" style="color: red;"></i>
+                                <i class="fas fa-exclamation-circle error-tag" style="color: red;"></i>
+                                <i class="fas fa-envelope input-tag"></i>
                             </div>
                             <p class="input-error">Vui lòng nhập lại Email</p>
                         </article>
                         <article class="input-block">
-                            <label for="address">Địa chỉ</label>
                             <div class="input-box">
                                 <input type="text" name="address" id="address" placeholder="Địa chỉ liên hệ...">
-                                <i class="fas fa-exclamation-circle" style="color: red;"></i>
+                                <i class="fas fa-exclamation-circle error-tag" style="color: red;"></i>
+                                <i class="fas fa-map input-tag"></i>
                             </div>
                             <p class="input-error">Vui lòng nhập lại địa chỉ</p>
                         </article>
                         <article class="input-block">
-                            <label for="education">Trình độ học vấn</label>
                             <div class="input-box">
                                 <select name="education" id="education">
-                                    <option value="junior" selected>Trung học cơ sở</option>
+                                    <option value="-1" selected>Trình độ học vấn</option>
+                                    <option value="junior">Trung học cơ sở</option>
                                     <option value="high">Trung học phổ thông</option>
                                     <option value="other">Khác</option>
                                 </select>
-                                <i class="fas fa-exclamation-circle" style="color: red;"></i>
+                                <i class="fas fa-exclamation-circle error-tag" style="color: red;"></i>
                             </div>
                             <p class="input-error">Vui lòng chọn lại trình độ học vấn</p>
                         </article>
@@ -132,22 +133,22 @@
                             Thông tin đăng ký xét tuyển
                         </h4>
                         <article class="input-block">
-                            <label for="trainingSystem">Hệ đào tạo</label>
                             <div class="input-box">
                                 <select name="trainingSystem" id="trainingSystem">
-                                    <option value="mid" selected>Trung cấp chuyên nghiệp</option>
+                                    <option value="-1" selected>Hệ đào tạo</option>
+                                    <option value="mid">Trung cấp chuyên nghiệp</option>
                                     <option value="short">Khóa ngắn hạn</option>
                                     <option value="thematic">Khác</option>
                                 </select>
-                                <i class="fas fa-exclamation-circle" style="color: red;"></i>
+                                <i class="fas fa-exclamation-circle error-tag" style="color: red;"></i>
                             </div>
                             <p class="input-error">Vui lòng chọn lại hệ đào tạo</p>
                         </article>
                         <article class="input-block">
-                            <label for="course">Ngành đào tạo</label>
                             <div class="input-box">
                                 <select name="course" id="course">
-                                    <option value="1" selected>Quản lý nhà đất</option>
+                                    <option value="-1" selected>Ngành đào tạo</option>
+                                    <option value="1">Quản lý nhà đất</option>
                                     <option value="2">Quản lý đất đai</option>
                                     <option value="3">Chăn nuôi - Thú y</option>
                                     <option value="4">Kế toán doanh nghiệp</option>
@@ -160,9 +161,14 @@
                                     <option value="11">Kinh doanh bất động sản</option>
                                     <option value="12">Thiết kế cảnh quan viên</option>
                                 </select>
-                                <i class="fas fa-exclamation-circle" style="color: red;"></i>
+                                <i class="fas fa-exclamation-circle error-tag" style="color: red;"></i>
                             </div>
                             <p class="input-error">Vui lòng chọn lại ngành đào tạo</p>
+                        </article>
+                        <article class="input-block">
+                            <div class="input-box">
+                                <textarea name="note" id="note" placeholder="Ghi chú"></textarea>
+                            </div>
                         </article>
                     </article>
                     <article class="register--btn">
@@ -318,9 +324,9 @@
                 </section>
             </aside>
         </section>
-        <footer class="main-footer--outter inside-box">
+        <footer class="main-footer--outter">
             <section class="container">
-                <section class="contacts-box content-box inside-box__content">
+                <section class="contacts-box content-box">
                     <section class="contacts-box__header">
                         <ul class="contacts-box__list">
                             <li class="contacts-box__list--item">
@@ -377,7 +383,7 @@
                     </section>
                 </section>
             </section>
-            <section class="main-footer--inner inside-box__main">
+            <section class="main-footer--inner">
                 <article class="main-footer__content">
                     <section class="main-footer__logo">
                         <img src="images/ats-logo-2.png" alt="">
