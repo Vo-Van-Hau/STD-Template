@@ -442,7 +442,7 @@ video {
 }
 /* #region News */
 .contacts-box__title{
-  display: none;
+  /* display: none; */
 }
 /* #endregion News */
 .contacts-box__list--item {
