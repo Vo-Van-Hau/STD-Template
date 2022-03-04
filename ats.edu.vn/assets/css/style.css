@@ -442,7 +442,7 @@ video {
 }
 /* #region News */
 .contacts-box__title{
-  /* display: none; */
+  display: none;
 }
 /* #endregion News */
 .contacts-box__list--item {
@@ -1061,14 +1061,14 @@ video {
     height: 4em;
   }
   .inside-box{
-    height: 540px;
+    height: 550px;
   }
   .inside-box__content{
     top: 2em !important;
     background-color: rgba(121, 134, 150, 0.7);
   }
   .inside-box__main{
-    margin-top: 6em;
+    margin-top: 5em;
   }
   .form-container{
     flex-direction: column;
@@ -1128,7 +1128,7 @@ video {
   }
   .main-footer--inner{
     position: unset;
-    margin-top: 5em;
+    margin-top: 3em;
   }
   .relate-post__detail{
     font-size: 0.8em;
@@ -1162,7 +1162,7 @@ video {
     margin-top: 0.7em;
   }.input-block{
     flex-direction: column;
-    width: 27em;
+    width: 95%;
   }
   .input-box{
     width: 100%;
@@ -1175,7 +1175,7 @@ video {
     box-sizing: border-box;
   }
   .base-value .input-block{
-    width: 27em;
+    width: 95%;
     margin: 0 1.2em;
   }
   .base-value .input-block:first-child{
