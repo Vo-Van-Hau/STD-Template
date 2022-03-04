@@ -5,6 +5,9 @@ const dob = $('#dateOfBirth');
 const phone = $('#phoneNumber');
 const mail = $('#email');
 const address = $('#address');
+const education = $('#education');
+const trainingSystem = $('#trainingSystem');
+const course = $('#course');
 
 const inputBox = $('.input-box');
 
@@ -12,7 +15,7 @@ const nameRegex = /^[a-zA-Z ]+$/;
 const mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const phoneRegex = /0\d{9}/gm;
 
-function toggleErrors(index, isCorrect) {
+function toggleErrors(index, isCorrect) { //0 true 1 false
     switch (isCorrect) {
         case 1: {
                 $(inputBox[index]).addClass('input-box--error');
@@ -77,14 +80,29 @@ const isAddressCorrect = () => {
         return toggleErrors(4, 1);
     } else return toggleErrors(4, 0);
 }
+const isEducationCorrect = () => {
+    if(education.val() <= 0) {
+        return toggleErrors(5, 1);
+    } else return toggleErrors(5, 0);
+}
+const isTrainStCorrect = () => {
+    if(trainingSystem.val() <= 0) {
+        return toggleErrors(6, 1);
+    } else return toggleErrors(6, 0);
+}
+const isCourseCorrect = () => {
+    if(course.val() <= 0) {
+        return toggleErrors(7, 1);
+    } else return toggleErrors(7, 0);
+}
 submitBtn.click(() => {
-    // if(isNameCorrect() && isDOBCorrect() && isPhoneCorrect() && isMailCorrect() && isAddressCorrect()) {
-        // return true;
-    // } else return false;
     isNameCorrect();
     isDOBCorrect();
     isPhoneCorrect();
     isMailCorrect();
     isAddressCorrect();
-    return isNameCorrect() && isDOBCorrect() && isPhoneCorrect() && isMailCorrect() && isAddressCorrect();
+    isEducationCorrect();
+    isTrainStCorrect();
+    isCourseCorrect();
+    return isNameCorrect() && isDOBCorrect() && isPhoneCorrect() && isMailCorrect() && isAddressCorrect() && isEducationCorrect() && isTrainStCorrect() && isCourseCorrect();
 });

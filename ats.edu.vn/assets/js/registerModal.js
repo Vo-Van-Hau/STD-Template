@@ -8,3 +8,7 @@ $(window).click(e => {
     if(e.target == registerModal[0]) 
         registerModal.hide();
 });
+
+$('#register-btn').click(e => {
+    registerModal.toggle();
+})
