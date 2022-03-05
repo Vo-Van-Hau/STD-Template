@@ -10,7 +10,6 @@ $('#headSearchBtn').click(() => {
         })
         $('#headSearch').css({
             animation: 'searchSlideLeft 1s forwards',
-            // display: 'inline',
         });
         isHidden = true;
     } else {

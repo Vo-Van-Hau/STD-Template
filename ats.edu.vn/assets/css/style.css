@@ -33,6 +33,9 @@ img {
 video {
   width: 100%;
 }
+strong {
+  font-weight: 700;
+}
 /* #region News */
 @keyframes fadeIn {
   from{
@@ -891,7 +894,6 @@ video {
   bottom: -.5em;
   left: 50%;
   margin-left: -.5em;
-
 }
 /* #endregion Register Form */
 @media only screen and (max-width : 48em){
